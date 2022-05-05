@@ -58,4 +58,9 @@ in
     url = "${downloads}/8.10.7/ghc-8.10.7-x86_64-fedora27-linux.tar.xz";
     sha256 = "sha256:0wsv3smj52jwwcp9pcl39vpfb5p1smv9jp768a04l193k826gvdn";
   };
+
+  ghc_9_2_1 = fromBindist {
+    url = "${downloads}/9.2.1/ghc-9.2.1-x86_64-fedora27-linux.tar.xz";
+    sha256 = "sha256:0aakbm7haqgaqg3wy1slj3h8r4x0zvivmb4d84px8v80ckzd2z73";
+  };
 }

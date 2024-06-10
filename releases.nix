@@ -1,4 +1,4 @@
-{ baseNixpkgs ? (import <nixpkgs> {}) }:
+{ baseNixpkgs ? (import <nixpkgs> {}), system ? baseNixpkgs.system }:
 
 let
   nixpkgsSrc = baseNixpkgs.fetchFromGitHub {
@@ -7,7 +7,7 @@ let
     rev = "c2ef0cee28a17f6fcb64ea0d0fb705f8c5ee6cf3";
     sha256 = "05vvj1693p6d56l9wl7f2cxdrn57sdgx6wa1vph67brl8xzlmzbc";
   };
-  nixpkgs = import nixpkgsSrc {};
+  nixpkgs = import nixpkgsSrc { inherit system; };
 in with nixpkgs;
 
 let
